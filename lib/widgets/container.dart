@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomContainer extends StatelessWidget {
-  final int number;
+   num? number;
+   String? operation;
   Color? bgColor;
-   CustomContainer({super.key, required this.number});
+   CustomContainer({super.key,  this.number , this.operation,this.bgColor});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class CustomContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: bgColor ?? Colors.white
       ),
-      child: Center(child: Text(number.toString() , style: const TextStyle(color: Colors.black , fontSize: 32 ,fontWeight: FontWeight.bold),)),
+      child: Center(child: Text(operation ?? number.toString() , style: const TextStyle(color: Colors.black , fontSize: 32 ,fontWeight: FontWeight.bold),)),
     );
   }
 }
