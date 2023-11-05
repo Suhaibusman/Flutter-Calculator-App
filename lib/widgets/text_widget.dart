@@ -1,10 +1,13 @@
+import 'package:calculator_app/ViewModel/home_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
+class TextWidget extends ViewModelWidget<HomeViewModel> {
+  const TextWidget({super.key});
+  
   @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+  Widget build(BuildContext context,HomeViewModel viewModel) {
+    return Text(viewModel.counterValue.toString());
   }
+
 }

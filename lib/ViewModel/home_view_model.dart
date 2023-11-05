@@ -1,5 +1,6 @@
 import 'package:stacked/stacked.dart';
 class HomeViewModel extends BaseViewModel{
 
-int counter = 0;
+int counterValue = 0;
+
 }
